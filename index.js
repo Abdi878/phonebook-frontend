@@ -5,6 +5,8 @@ app.use(express.json());
 morgan.token("body", function (req, res) {
   return JSON.stringify(req.body);
 });
+app.use(express.static("build"));
+
 app.use(
   morgan(function (tokens, req, res) {
     return [
