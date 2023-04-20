@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/persons/ HTTP/1.1
+POST https://phonebook-frontend-mp0b.onrender.com/api/persons/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Timmy Turnerersa",
+    "name": "Timmy Turnererppsa",
     "number": "05324123132"
 }
