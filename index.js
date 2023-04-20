@@ -1,8 +1,8 @@
 const express = require("express");
-require("dotenv").config()  
+require("dotenv").config();
 const morgan = require("morgan");
 const app = express();
-const Person = require("./models/person")
+const Person = require("./models/person");
 app.use(express.json());
 morgan.token("body", function (req, res) {
   return JSON.stringify(req.body);
@@ -102,10 +102,9 @@ app.post("/api/persons", (req, res) => {
     name: body.name,
     number: body.number,
   };
-  person.save().then(savedPerson=>{
-    res.json(savedPerson)
-  })
+  person.save().then((savedPerson) => {
+    res.json(savedPerson);
+  });
   console.log(person);
   persons = persons.concat(person);
-  res.json(person);
 });
